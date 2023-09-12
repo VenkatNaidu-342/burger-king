@@ -8,7 +8,7 @@
   <title>Burger Shop | Home</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <style>
-    
+    /* Reset some default styles */
     * {
       box-sizing: border-box;
       margin: 0;
@@ -16,13 +16,13 @@
       scroll-behavior: smooth;
     }
 
-    
+    /* Set the background color and font */
     body {
       background-color: #f2f2f2;
       font-family: Arial, sans-serif;
     }
 
-    
+    /* Style the header and navigation */
     header {
       background-image: url("https://th.bing.com/th/id/OIP.XEh_-wsbPoVHZKHpv9Q_8gHaEi?pid=ImgDet&rs=1");
       background-size: cover;
@@ -107,7 +107,7 @@
       text-decoration: none;
     }
 
-   
+    /* Style the about section */
     #about {
       display: block;
       justify-content: space-between;
@@ -122,15 +122,16 @@
       width: 100%;
     }
 
-  
+    /* Style the menu section */
     #menu {
       text-align: center;
+      /* padding: 50px; */
     }
 
     .menu-items {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: stretch;
       flex-wrap: wrap;
       margin-top: 50px;
     }
@@ -142,6 +143,20 @@
       padding: 20px;
       margin: 20px;
       width: 300px;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.3s;
+    }
+
+    .menu-item:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+    }
+
+
+    .menu-item-content {
+      flex-grow: 1;
     }
 
     .menu-item img {
@@ -160,7 +175,7 @@
       margin-bottom: 10px;
     }
 
-    
+    /* Style the contact section */
     #contact {
       text-align: center;
       padding: 50px;
@@ -187,7 +202,7 @@
       cursor: pointer;
     }
 
-    
+    /* Style the footer */
     footer {
       background-color: #333;
       color: #fff;
@@ -237,7 +252,7 @@
       .menu-item {
         width: 100%;
         margin: 0px;
-        margin-bottom: 1rem;
+        margin-bottom: 2rem;
       }
 
       #contact {
@@ -259,7 +274,7 @@
       }
     }
 
-    
+    /* Tablet and Desktop Devices */
     @media (min-width: 768px) {
       #about {
         padding: 50px;
@@ -341,6 +356,7 @@
     <h2>Our Menu</h2>
     <div class="menu-items">
       <div class="menu-item">
+        <div class="menu-item-content">
         <img src="https://cdn.tasteatlas.com//images/dishes/835427166e184350a75a4f2a799a2ba9.jpg?w=905&h=510"
           alt="Burger 1">
         <h3>Olive Burger</h3>
@@ -348,8 +364,10 @@
           beef, oil, white buns, mayonnaise, and pitted green olives. In order to prepare it, the meat patties are
           fried, topped with a mixture of olives and mayonnaise, then placed in a burger bun with no other condiments.
         </p>
+        </div>
       </div>
       <div class="menu-item">
+        <div class="menu-item-content">
         <img src="https://cdn.tasteatlas.com//images/dishes/d69065cdf6f348b6a3c40466f8182ea7.jpg?w=905&h=510"
           alt="Burger 2">
         <h3>Steamed Cheeseburger</h3>
@@ -357,14 +375,17 @@
           regular burgers, this local specialty is made with steamed ground beef and steamed chunks of cheese (usually
           cheddar). They are both steamed separately, the beef in special metal molds, and the cheese in separate
           containers.</p>
+        </div>
       </div>
       <div class="menu-item">
+        <div class="menu-item-content">
         <img src="https://cdn.tasteatlas.com//images/dishes/5719938996334b529d3efc4abe36b4ec.jpg?w=905&h=510"
           alt="Burger 3">
         <h3>Slaw Burger</h3>
         <p>Slaw burger is a traditional American type of burger that's common in the southern parts of the United
           States. It's essentially a classic burger topped with coleslaw. In most cases, the burger consists of a meat
           patty that's topped with sliced tomatoes, sliced onions, and coleslaw dressing.</p>
+        </div>
       </div>
     </div>
   </section>
