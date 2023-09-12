@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Burger King(Landing Page)</title>
+  <title>Burger Shop | Home</title>
   <link rel="stylesheet" type="text/css" href="style.css">
   <style>
     /* Reset some default styles */
@@ -67,11 +67,10 @@
       padding: 120px 50px 50px;
     }
 
-
-
     .logo img {
       height: 100px;
       width: 100px;
+      cursor: pointer;
     }
 
     .nav-links li {
@@ -82,7 +81,7 @@
     .nav-links a {
       color: #fff;
       text-decoration: none;
-    }
+    }  
 
     /* Style the hero text */
     .hero-text {
@@ -281,16 +280,21 @@
       }
 
       nav {
-        padding: 20px;
+        padding: 10px;
       }
 
       .logo img {
-        height: 100px;
-        width: 100px;
+        height: 50px;
+        width: 50px;
       }
 
       .nav-links li {
-        margin-left: 20px;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+
+      .nav-links li a {
+        font-size: 16px;
       }
     }
   </style>
@@ -369,16 +373,16 @@
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <form>
-      <input type="text" placeholder="Your Name" required>
-      <input type="email" placeholder="Your Email" required>
-      <textarea placeholder="Your Message" required></textarea>
+    <form action="https://formsubmit.co/5ffd74036d75b09c8c005829759ac5f7" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
       <button type="submit">Send Message</button>
     </form>
   </section>
 
   <footer>
-    <p>© 2022 Burger Shop. All rights reserved.</p>
+    <p>© 2023 Burger Shop. All rights reserved.</p>
   </footer>
 </body>
 
