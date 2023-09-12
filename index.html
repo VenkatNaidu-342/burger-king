@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Burger Shop | Home</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    /* Reset some default styles */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      scroll-behavior: smooth;
+    }
+
+    /* Set the background color and font */
+    body {
+      background-color: #f2f2f2;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Style the header and navigation */
+    header {
+      background-image: url("https://th.bing.com/th/id/OIP.XEh_-wsbPoVHZKHpv9Q_8gHaEi?pid=ImgDet&rs=1");
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 50px;
+      text-align: center;
+      margin-top: 50px;
+    }
+
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #4f4f4f;
+      padding: 20px;
+      z-index: 9999;
+      justify-content: space-between;
+      display: flex;
+      align-items: center;
+      margin-bottom: 50px;
+    }
+
+    .about-content, h2, p {
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
+    #about {
+      text-align: center;
+      padding: 120px 50px 50px;
+    }
+
+    #menu {
+      text-align: center;
+      padding: 120px 50px 50px;
+    }
+    
+    #contact {
+      text-align: center;
+      padding: 120px 50px 50px;
+    }
+
+
+
+    .logo img {
+      height: 100px;
+      width: 100px;
+    }
+
+    .nav-links li {
+      display: inline-block;
+      margin-left: 20px;
+    }
+
+    .nav-links a {
+      color: #fff;
+      text-decoration: none;
+    }
+
+    /* Style the hero text */
+    .hero-text {
+      margin-top: 100px;
+    }
+
+    .hero-text h1 {
+      font-size: 48px;
+      margin-bottom: 20px;
+    }
+
+    .hero-text p {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #ff9800;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+    }
+
+    /* Style the about section */
+    #about {
+      display: block;
+      justify-content: space-between;
+      /* padding: 50px; */
+    }
+
+    .about-content {
+      flex: 1;
+    }
+
+    .about-image img {
+      width: 100%;
+    }
+
+    /* Style the menu section */
+    #menu {
+      text-align: center;
+      /* padding: 50px; */
+    }
+
+    .menu-items {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+
+    .menu-item {
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      margin: 20px;
+      width: 300px;
+    }
+
+    .menu-item img {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+
+    .menu-item h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .menu-item p {
+      font-size: 14px;
+      color: #777;
+      margin-bottom: 10px;
+    }
+
+    /* Style the contact section */
+    #contact {
+      text-align: center;
+      padding: 50px;
+    }
+
+    form input,
+    form textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    form button {
+      display: inline-block;
+      background-color: #ff9800;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      border: none;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    /* Style the footer */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 30px;
+      }
+
+      .hero-text {
+        margin-top: 50px;
+      }
+
+      .hero-text h1 {
+        font-size: 36px;
+        margin-bottom: 15px;
+      }
+
+      .hero-text p {
+        font-size: 18px;
+        margin-bottom: 15px;
+      }
+
+      .cta-button {
+        font-size: 16px;
+        padding: 8px 16px;
+      }
+
+      #about {
+        flex-direction: column;
+        /* padding: 30px; */
+      }
+
+      .about-content {
+        margin-bottom: 30px;
+      }
+
+      #menu .menu-items {
+        flex-direction: column;
+        align-items: flex-start;
+        margin-top: 30px;
+      }
+
+      .menu-item {
+        width: 100%;
+        margin: 0px;
+        margin-bottom: 1rem;
+      }
+
+      #contact {
+        padding: 30px;
+      }
+
+      nav {
+        padding: 10px;
+      }
+
+      .logo img {
+        height: 50px;
+        width: 50px;
+      }
+
+      .nav-links li {
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    }
+
+    /* Tablet and Desktop Devices */
+    @media (min-width: 768px) {
+      #about {
+        padding: 50px;
+      }
+
+      #menu {
+        padding: 50px;
+      }
+
+      #contact {
+        padding: 50px;
+      }
+
+      .about-image img {
+        width: 700px;
+        height: 200px;
+      }
+
+      nav {
+        padding: 20px;
+      }
+
+      .logo img {
+        height: 100px;
+        width: 100px;
+      }
+
+      .nav-links li {
+        margin-left: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="logo">
+      <img src="https://image.freepik.com/free-vector/burger-logo-vector_27088-105.jpg" alt="Burger Shop">
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#menu">Menu</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header id="home">
+
+    <div class="hero-text">
+      <h1>Welcome to Burger Shop</h1>
+      <p>Delicious Burgers Made with Love</p>
+      <a href="#menu" class="cta-button">Explore Our Menu</a>
+    </div>
+  </header>
+
+  <section id="about">
+    <div class="about-content">
+      <h2>About Us</h2>
+      <p>Indulge in the ultimate culinary delight with our mouthwatering, tantalizing burger – a symphony of flavors and
+        textures that will leave your taste buds dancing with joy. Crafted with precision and passion, our delicious
+        burger is a culinary masterpiece that will redefine your burger experience.</p>
+      <p>Our signature burger is a true work of art, featuring a perfectly grilled, juicy beef patty that's seasoned to perfection. Nestled between two soft, toasted brioche buns, it's adorned with a medley of fresh, locally sourced ingredients. Crisp lettuce, plump tomatoes, and crunchy pickles provide a burst of freshness, while our secret sauce adds a delightful tangy kick.</p>
+      <p>But what truly sets our burgers apart is the craftsmanship that goes into every creation. We believe in using only the finest ingredients and preparing each burger with care and passion. Our commitment to quality ensures that every burger is a symphony of flavors that will leave you craving for more.</p>
+      <p></p>
+    </div><br>
+    <div class="about-image">
+      <img
+        src="https://i0.wp.com/www.replaygames.us/wp-content/uploads/2017/09/burgertime-1.png?resize=1277%2C500&ssl=1"
+        alt="Burger Shop About">
+    </div>
+  </section>
+
+  <section id="menu">
+    <h2>Our Menu</h2>
+    <div class="menu-items">
+      <div class="menu-item">
+        <img src="https://cdn.tasteatlas.com//images/dishes/835427166e184350a75a4f2a799a2ba9.jpg?w=905&h=510"
+          alt="Burger 1">
+        <h3>Olive Burger</h3>
+        <p>Olive burger is an American burger variety originating from Michigan. It’s made with a combination of ground
+          beef, oil, white buns, mayonnaise, and pitted green olives. In order to prepare it, the meat patties are
+          fried, topped with a mixture of olives and mayonnaise, then placed in a burger bun with no other condiments.
+        </p>
+      </div>
+      <div class="menu-item">
+        <img src="https://cdn.tasteatlas.com//images/dishes/d69065cdf6f348b6a3c40466f8182ea7.jpg?w=905&h=510"
+          alt="Burger 2">
+        <h3>Steamed Cheeseburger</h3>
+        <p>Steamed cheeseburger or cheeseburg is a unique cheeseburger variation originating from Connecticut. Unlike
+          regular burgers, this local specialty is made with steamed ground beef and steamed chunks of cheese (usually
+          cheddar). They are both steamed separately, the beef in special metal molds, and the cheese in separate
+          containers.</p>
+      </div>
+      <div class="menu-item">
+        <img src="https://cdn.tasteatlas.com//images/dishes/5719938996334b529d3efc4abe36b4ec.jpg?w=905&h=510"
+          alt="Burger 3">
+        <h3>Slaw Burger</h3>
+        <p>Slaw burger is a traditional American type of burger that's common in the southern parts of the United
+          States. It's essentially a classic burger topped with coleslaw. In most cases, the burger consists of a meat
+          patty that's topped with sliced tomatoes, sliced onions, and coleslaw dressing.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required>
+      <input type="email" placeholder="Your Email" required>
+      <textarea placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2022 Burger Shop. All rights reserved.</p>
+  </footer>
+</body>
+
+</html>
