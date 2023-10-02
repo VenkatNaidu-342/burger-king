@@ -7,8 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Burger King (Landing Page)</title>
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
   <style>
-    
     * {
       box-sizing: border-box;
       margin: 0;
@@ -16,13 +16,11 @@
       scroll-behavior: smooth;
     }
 
-    
     body {
       background-color: #f2f2f2;
       font-family: Arial, sans-serif;
     }
 
-   
     header {
       background-image: url("https://th.bing.com/th/id/OIP.XEh_-wsbPoVHZKHpv9Q_8gHaEi?pid=ImgDet&rs=1");
       background-size: cover;
@@ -45,9 +43,12 @@
       display: flex;
       align-items: center;
       margin-bottom: 50px;
+      color: white;
     }
 
-    .about-content, h2, p {
+    .about-content,
+    h2,
+    p {
       justify-content: space-between;
       margin-bottom: 20px;
     }
@@ -61,7 +62,7 @@
       text-align: center;
       padding: 120px 50px 50px;
     }
-    
+
     #contact {
       text-align: center;
       padding: 120px 50px 50px;
@@ -74,16 +75,43 @@
     }
 
     .nav-links li {
-      display: inline-block;
-      margin-left: 20px;
+      /* display: inline-block; */
+      /* margin-left: 20px; */
     }
 
     .nav-links a {
-      color: #fff;
-      text-decoration: none;
-    }  
+      /* color: #fff; */
+      /* text-decoration: none; */
+    }
 
-    
+    .menu ul {
+      display: flex;
+    }
+
+    .menu li {
+      list-style: none;
+    }
+
+    .menu li a {
+      text-decoration: none;
+      color: white;
+      padding: 16px;
+      display: block;
+    }
+
+    .menu li:hover {
+      background-color: #48637e;
+    }
+
+    .toggle {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      display: none;
+      font-size: 30px;
+      cursor: pointer;
+    }
+
     .hero-text {
       margin-top: 100px;
     }
@@ -121,6 +149,7 @@
       width: 100%;
     }
 
+    /* Style the menu section */
     #menu {
       text-align: center;
       /* padding: 50px; */
@@ -207,6 +236,40 @@
     }
 
     @media (max-width: 600px) {
+
+      .toggle {
+        display: block;
+      }
+
+      .menu {
+        display: none;
+        width: 100%;
+      }
+
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .menu ul {
+        flex-direction: column;
+        background-color: #2f3640;
+        width: 100%;
+      }
+
+      .menu ul li {
+        text-align: center;
+        border-bottom: 1px solid white;
+      }
+
+      .menu ul li a {
+        padding: 12px 16px;
+      }
+
+      .menu.active {
+        display: flex;
+      }
+
       header {
         padding: 30px;
       }
@@ -232,7 +295,6 @@
 
       #about {
         flex-direction: column;
-        /* padding: 30px; */
       }
 
       .about-content {
@@ -310,16 +372,20 @@
 </head>
 
 <body>
-  <nav>
+  <nav class="navbar">
     <div class="logo">
-      <a href="#"><img src="https://image.freepik.com/free-vector/burger-logo-vector_27088-105.jpg" alt="Burger Shop"></a>
+      <a href="#"><img src="https://image.freepik.com/free-vector/burger-logo-vector_27088-105.jpg"
+          alt="Burger Shop"></a>
     </div>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#about">About</a></li>
-      <li><a href="#menu">Menu</a></li>
-      <li><a href="#contact">Contact</a></li>
-    </ul>
+    <i class="fas fa-bars toggle"></i>
+    <div class="menu">
+      <ul class="nav-links">
+        <li><a href="#">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#menu">Menu</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
   </nav>
 
   <header id="home">
@@ -337,8 +403,13 @@
       <p>Indulge in the ultimate culinary delight with our mouthwatering, tantalizing burger – a symphony of flavors and
         textures that will leave your taste buds dancing with joy. Crafted with precision and passion, our delicious
         burger is a culinary masterpiece that will redefine your burger experience.</p>
-      <p>Our signature burger is a true work of art, featuring a perfectly grilled, juicy beef patty that's seasoned to perfection. Nestled between two soft, toasted brioche buns, it's adorned with a medley of fresh, locally sourced ingredients. Crisp lettuce, plump tomatoes, and crunchy pickles provide a burst of freshness, while our secret sauce adds a delightful tangy kick.</p>
-      <p>But what truly sets our burgers apart is the craftsmanship that goes into every creation. We believe in using only the finest ingredients and preparing each burger with care and passion. Our commitment to quality ensures that every burger is a symphony of flavors that will leave you craving for more.</p>
+      <p>Our signature burger is a true work of art, featuring a perfectly grilled, juicy beef patty that's seasoned to
+        perfection. Nestled between two soft, toasted brioche buns, it's adorned with a medley of fresh, locally sourced
+        ingredients. Crisp lettuce, plump tomatoes, and crunchy pickles provide a burst of freshness, while our secret
+        sauce adds a delightful tangy kick.</p>
+      <p>But what truly sets our burgers apart is the craftsmanship that goes into every creation. We believe in using
+        only the finest ingredients and preparing each burger with care and passion. Our commitment to quality ensures
+        that every burger is a symphony of flavors that will leave you craving for more.</p>
       <p></p>
     </div><br>
     <div class="about-image">
@@ -352,34 +423,35 @@
     <div class="menu-items">
       <div class="menu-item">
         <div class="menu-item-content">
-        <img src="https://cdn.tasteatlas.com//images/dishes/835427166e184350a75a4f2a799a2ba9.jpg?w=905&h=510"
-          alt="Burger 1">
-        <h3>Olive Burger</h3>
-        <p>Olive burger is an American burger variety originating from Michigan. It’s made with a combination of ground
-          beef, oil, white buns, mayonnaise, and pitted green olives. In order to prepare it, the meat patties are
-          fried, topped with a mixture of olives and mayonnaise, then placed in a burger bun with no other condiments.
-        </p>
+          <img src="https://cdn.tasteatlas.com//images/dishes/835427166e184350a75a4f2a799a2ba9.jpg?w=905&h=510"
+            alt="Burger 1">
+          <h3>Olive Burger</h3>
+          <p>Olive burger is an American burger variety originating from Michigan. It’s made with a combination of
+            ground
+            beef, oil, white buns, mayonnaise, and pitted green olives. In order to prepare it, the meat patties are
+            fried, topped with a mixture of olives and mayonnaise, then placed in a burger bun with no other condiments.
+          </p>
         </div>
       </div>
       <div class="menu-item">
         <div class="menu-item-content">
-        <img src="https://cdn.tasteatlas.com//images/dishes/d69065cdf6f348b6a3c40466f8182ea7.jpg?w=905&h=510"
-          alt="Burger 2">
-        <h3>Steamed Cheeseburger</h3>
-        <p>Steamed cheeseburger or cheeseburg is a unique cheeseburger variation originating from Connecticut. Unlike
-          regular burgers, this local specialty is made with steamed ground beef and steamed chunks of cheese (usually
-          cheddar). They are both steamed separately, the beef in special metal molds, and the cheese in separate
-          containers.</p>
+          <img src="https://cdn.tasteatlas.com//images/dishes/d69065cdf6f348b6a3c40466f8182ea7.jpg?w=905&h=510"
+            alt="Burger 2">
+          <h3>Steamed Cheeseburger</h3>
+          <p>Steamed cheeseburger or cheeseburg is a unique cheeseburger variation originating from Connecticut. Unlike
+            regular burgers, this local specialty is made with steamed ground beef and steamed chunks of cheese (usually
+            cheddar). They are both steamed separately, the beef in special metal molds, and the cheese in separate
+            containers.</p>
         </div>
       </div>
       <div class="menu-item">
         <div class="menu-item-content">
-        <img src="https://cdn.tasteatlas.com//images/dishes/5719938996334b529d3efc4abe36b4ec.jpg?w=905&h=510"
-          alt="Burger 3">
-        <h3>Slaw Burger</h3>
-        <p>Slaw burger is a traditional American type of burger that's common in the southern parts of the United
-          States. It's essentially a classic burger topped with coleslaw. In most cases, the burger consists of a meat
-          patty that's topped with sliced tomatoes, sliced onions, and coleslaw dressing.</p>
+          <img src="https://cdn.tasteatlas.com//images/dishes/5719938996334b529d3efc4abe36b4ec.jpg?w=905&h=510"
+            alt="Burger 3">
+          <h3>Slaw Burger</h3>
+          <p>Slaw burger is a traditional American type of burger that's common in the southern parts of the United
+            States. It's essentially a classic burger topped with coleslaw. In most cases, the burger consists of a meat
+            patty that's topped with sliced tomatoes, sliced onions, and coleslaw dressing.</p>
         </div>
       </div>
     </div>
@@ -398,6 +470,25 @@
   <footer>
     <p>© 2023 Burger Shop. All rights reserved.</p>
   </footer>
+
+  <script>
+    let toggle = document.querySelector(".toggle")
+
+    let menu = document.querySelector(".menu")
+
+    toggle.onclick = function () {
+      menu.classList.toggle("active")
+    }
+
+    document.querySelectorAll(".nav-links a").forEach((link) => {
+      link.addEventListener("click", () => {
+        if (menu.classList.contains("active")) {
+          menu.classList.remove("active");
+        }
+      });
+    });
+
+  </script>
 </body>
 
 </html>
